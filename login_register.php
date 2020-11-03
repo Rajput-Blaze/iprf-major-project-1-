@@ -23,24 +23,25 @@
     <div class="login_nav">
         <?php include 'header.php'?>
     </div>
-    <div class="main my-5 py-5">
+    <div class="main my-5">
         <div class="container">
-           
+
             <div class="login_main d-none row" id="login">
-               
+
                 <div class="login_data col-md-6">
+                    <h2>sign in</h2>
                     <form action="/action_page.php">
                         <div class="form-group">
                             <label for="email">Email address:</label>
-                            <input type="email" class="form-control" placeholder="Enter email" id="email">
+                            <input type="email" class="form-control" placeholder="Enter email">
                         </div>
                         <div class="form-group">
                             <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                            <input type="password" class="form-control" placeholder="Enter password">
                         </div>
-                        <div class="form-group form-check">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox"> Remember me
+                        <div class="form-group ">
+                            <label class="form-label">
+                                <span>new here ?</span> <span onclick="register()">Create an account </span>
                             </label>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -52,24 +53,33 @@
 
             </div>
 
-            <div class="login_main register row" id="register">
+            <div class="login_main  row" id="register">
+
                 <div class="login_data col-md-6">
+                   <h2>sign up</h2>
                     <form action="/action_page.php">
-                       <div class="form-group">
-                            <label for="email">name:</label>
-                            <input type="text" class="form-control" placeholder="Enter full" id="email">
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Enter first name" name="first_name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Enter last name" name="last_name">
+                            </div>
+                        </div>
+                        <div class="form-row my-4">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Enter email" name="email">
+                            </div>
+                            <div class="col">
+                                <input type="mobile" class="form-control" placeholder="Enter mobile number" name="number">
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email address:</label>
-                            <input type="email" class="form-control" placeholder="Enter email" id="email">
+                            <input type="password" class="form-control" placeholder="Enter password">
                         </div>
-                        <div class="form-group">
-                            <label for="pwd">Password:</label>
-                            <input type="password" class="form-control" placeholder="Enter password" id="pwd">
-                        </div>
-                        <div class="form-group form-check">
-                            <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox"> Remember me
+                        <div class="form-group ">
+                            <label class="form-label-reg">
+                                <span>have an account ?</span> <span onclick="login()"> click here</span>
                             </label>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -85,6 +95,18 @@
 
     <?php include_once 'footer.php';?>
 
+    <script>
+        function register() {
+            document.getElementById('login').classList.add('d-none');
+            document.getElementById('register').classList.remove('d-none')
+        }
+
+        function login() {
+            document.getElementById('register').classList.add('d-none');
+            document.getElementById('login').classList.remove('d-none')
+        }
+
+    </script>
 </body>
 
 </html>

@@ -6,6 +6,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    text-transform: capitalize
 }
 
 .main {
@@ -15,7 +16,7 @@
 
 .login_main {
     box-shadow: 0px 3px 81px 0px rgba(216, 216, 216, 0.45);
-    padding: 100px 50px;
+    padding: 30px 50px;
 }
 
 .login_img {
@@ -25,3 +26,36 @@
 
 }
 
+.form-label span:nth-child(1) {
+    font-weight: 600;
+    color: #2a2a2a
+}
+
+.form-label span:nth-child(2) {
+    color: chocolate;
+    font-weight: 500;
+    cursor: pointer
+}
+
+.form-label span:nth-child(2):hover {
+    color: #006730;
+    font-weight: 600
+}
+
+
+
+.form-label-reg span:nth-child(1) {
+    font-weight: 600;
+    color: #2a2a2a
+}
+
+.form-label-reg span:nth-child(2) {
+    color: chocolate;
+    font-weight: 500;
+    cursor: pointer
+}
+
+.form-label-reg span:nth-child(2):hover {
+    color: #006730;
+    font-weight: 600
+}
