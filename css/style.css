@@ -1,0 +1,87 @@
+.banner_part {
+    position: relative;
+    overflow: hidden;
+    background-image: url(../img/banner_bg.png);
+    background-repeat: no-repeat;
+    background-size: 140vw 130vh;
+    background-position: center;
+    height: 130vh
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-transform: capitalize;
+    box-sizing: border-box
+}
+
+.bannerInner {
+    display: flex;
+    height: 100vh;
+}
+
+.bannerInner .bannerInnerLeft {
+    flex: 1;
+    transform: translateY(30%);
+    color: aliceblue
+}
+
+.bannerInner .bannerInnerright {
+    flex: 1;
+    transform: translateY(10%);
+
+}
+
+.bannerInner .bannerInnerright img {
+    height: 500px;
+
+}
+
+.bannerInner .bannerInnerLeft > h3 {
+    font-family: 'Itim', cursive;
+    font-weight: 900;
+    padding-bottom: 50px;
+    font-size: 4rem
+}
+
+.bannerInner .bannerInnerLeft > p {
+
+    font-size: 1.5rem
+}
+
+.container .missionStatement-img .img > img {
+    /*    width: 50vw;*/
+    height: 70vh;
+    border-radius: 50px
+}
+
+.container .missionStatement-text {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.container .missionStatement .missionStatement-text h2 {
+    font-family: 'Itim', cursive;
+    font-weight: 900;
+    padding-bottom: 10px;
+    color: aqua;
+    font-size: 3rem
+}
+
+.container .missionStatement-text p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600
+}
+
+.missionStatement {}
+
+.single_feature img {
+    height: 65px;
+    width: 65px;
+}
+
+.single_feature ul li {
+    list-style: none
+}

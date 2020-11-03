@@ -1,0 +1,9 @@
+.navbar-nav .nav-item .nav-link {
+   color: aliceblue !important;
+}
+.navbar-nav .nav-item .nav-link .fa{
+   padding-right: 5px;
+}
+.navbar-brand >img{
+    width: 50px
+}

@@ -1,0 +1,27 @@
+.login_nav {
+    background-image: linear-gradient(45deg, #4481eb 0%, #04befe 100%);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main {
+    height: 80vh;
+    width: 100vw;
+}
+
+.login_main {
+    box-shadow: 0px 3px 81px 0px rgba(216, 216, 216, 0.45);
+    padding: 100px 50px;
+}
+
+.login_img {
+    background-image: url(../img/log.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
