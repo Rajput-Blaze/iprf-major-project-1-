@@ -11,7 +11,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    text-transform: capitalize;
+    
     box-sizing: border-box
 }
 
@@ -56,7 +56,6 @@
 }
 
 .container .missionStatement-text {
-
     display: flex;
     flex-direction: column;
     justify-content: center
@@ -67,12 +66,14 @@
     font-weight: 900;
     padding-bottom: 10px;
     color: aqua;
-    font-size: 3rem
+    font-size: 3rem;
+   
 }
 
 .container .missionStatement-text p {
     font-family: 'Nunito', sans-serif;
-    font-weight: 600
+    font-weight: 600;
+    
 }
 
 .missionStatement {}
@@ -83,5 +84,6 @@
 }
 
 .single_feature ul li {
-    list-style: none
+    list-style: none;
+    
 }

@@ -2,8 +2,7 @@
 <html lang="english">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+    
     <link rel="icon" href="img/logo.png">
     <meta charset="UTF-8">
     <title>major project</title>
@@ -25,28 +24,31 @@
     </div>
     <div class="main my-5">
         <div class="container">
+        <?php 
+        if(isset($_SESSION)){ 
 
+       echo $_SESSION['name'];} ?>
 
-            <?php   if (isset($_GET['message'])){ ?>
+         <?php    if (isset($_GET['message'])){ ?>
 
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Aww yeah</strong> ,<?php echo($_GET['message']) ?>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
+            <strong>Aww yeah</strong> ,<?php echo($_GET['message']) ?>
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+             </button>
+          </div>
 
-            <?php } elseif(isset($_GET['found'])){ ?>
+          <?php } elseif(isset($_GET['found'])){ ?>
 
             <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <strong>Aww noo...</strong><?php echo( $_GET['found'])?>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <?php }?>
-
-
+            <strong>Aww noo...</strong><?php echo( $_GET['found'])?>
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+             </button>
+          </div>
+          <?php }?>
+    
+        
 
             <div class="login_main  row" id="login">
 
@@ -59,14 +61,8 @@
                         </div>
                         <div class="form-group">
                             <label for="pwd">Password:</label>
-                            <input type="password" name="password" id="password_id" class="form-control" placeholder="Enter password">
-                            <div class="form-check">
-
-                                <input type="checkbox" onclick='password_viewer()' class="form-check-input" value="">show password
-
-                            </div>
+                            <input type="password" name="password" class="form-control" placeholder="Enter password">
                         </div>
-
                         <div class="form-group ">
                             <label class="form-label">
                                 <span>new here ?</span> <span onclick="register()">Create an account </span>
@@ -84,7 +80,7 @@
             <div class="login_main d-none row" id="register">
 
                 <div class="login_data col-md-6">
-                    <h2>sign up</h2>
+                   <h2>sign up</h2>
                     <form action="db_register.php" method="post">
                         <div class="form-row">
                             <div class="col">
@@ -102,18 +98,9 @@
                                 <input type="mobile" class="form-control" placeholder="Enter mobile number" name="number">
                             </div>
                         </div>
-
-
-
                         <div class="form-group">
-                            <input type="password" class="form-control" id="password_id2" placeholder="Enter password" name="password">
-                            <div class="form-check">
-
-                                <input type="checkbox" onclick='password_viewer2()' class="form-check-input" value="">show passwordd
-
-                            </div>
+                            <input type="password" class="form-control" placeholder="Enter password" name="password">
                         </div>
-
                         <div class="form-group ">
                             <label class="form-label-reg">
                                 <span>have an account ?</span> <span onclick="login()"> click here</span>
@@ -127,7 +114,7 @@
                 </div>
 
             </div>
-
+        
         </div>
     </div>
 
@@ -142,24 +129,6 @@
         function login() {
             document.getElementById('register').classList.add('d-none');
             document.getElementById('login').classList.remove('d-none')
-        }
-
-        function password_viewer() {
-            var x = document.getElementById("password_id");
-            if (x.type === "password") {
-                x.type = "text";
-            } else {
-                x.type = "password";
-            }
-        }
-
-        function password_viewer2() {
-            var x = document.getElementById("password_id2");
-            if (x.type === "password") {
-                x.type = "text";
-            } else {
-                x.type = "password";
-            }
         }
 
     </script>
